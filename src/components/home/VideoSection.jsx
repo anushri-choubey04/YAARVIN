@@ -60,7 +60,7 @@ export default function VideoSection() {
   ].map((v) => BASE + v);
 
   return (
-    <section className="w-full py-8 bg-black">
+    <section className="w-full py-4 bg-black">
       <header className="flex justify-center items-center mb-4 px-4">
         <h2 className="text-4xl md:text-5xl font-extrabold text-white text-center mb-6">
           Rent • Wear • Shine

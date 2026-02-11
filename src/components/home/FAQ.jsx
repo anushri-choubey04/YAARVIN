@@ -34,7 +34,7 @@ export default function FAQ() {
 
   return (
     <motion.section
-      className="relative mx-auto py-16 px-4 overflow-hidden bg-black"
+      className="relative mx-auto py-4 px-4 overflow-hidden bg-black"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

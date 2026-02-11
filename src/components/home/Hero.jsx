@@ -92,7 +92,7 @@ export default function Hero() {
           />
 
           {/* gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+          <div className="absolute bg-black" />
         </motion.div>
       </AnimatePresence>
 
@@ -104,7 +104,7 @@ export default function Hero() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-6xl font-extrabold tracking-tight mb-3"
+            className="text-2xl md:text-6xl font-extrabold tracking-tight mb-3"
           >
             {slides[index].title}
           </motion.h1>
@@ -117,14 +117,14 @@ export default function Hero() {
           >
             <button
               onClick={() => navigate(`/single-product/${slides[index].id}`)}
-              className="bg-white text-black font-semibold px-6 py-4 rounded-xl hover:scale-105 transition shadow-2xl items-center justify-center"
+              className="bg-white text-black font-semibold px-4 py-4 rounded-xl hover:scale-105 transition shadow-2xl items-center justify-center"
             >
               Rent Now
             </button>
 
             <button
               onClick={() => navigate("/lend")}
-              className="border border-white/70 px-6 py-4 rounded-xl hover:bg-white hover:text-black transition"
+              className="border border-white/70 px-4 py-4 rounded-xl hover:bg-white hover:text-black transition"
             >
               Earn Money
             </button>

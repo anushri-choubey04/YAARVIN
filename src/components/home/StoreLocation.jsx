@@ -7,7 +7,7 @@ export default function StoreLocation() {
       {/* Mobile-only section */}
       <section
         id="store-location"
-        className="block md:hidden bg-black/95   mx-auto  text-center p-8"
+        className="block md:hidden bg-black/95   mx-auto  text-center px-4 py-4"
       >
         {/* Store Icon */}
         <div className="flex justify-center mb-4">

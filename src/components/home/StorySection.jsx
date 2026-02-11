@@ -19,7 +19,7 @@ export default function StorySection() {
             className="flex flex-col items-center min-w-[72px] cursor-pointer"
           >
             {/* STORY CIRCLE */}
-            <div className="w-[64px] h-[64px] md:w-[80px] md:h-[80px] rounded-full p-[2px] bg-gradient-to-tr from-blue-900  to-white/50">
+            <div className="w-[72px] h-[72px] md:w-[120px] md:h-[120px] rounded-full p-[2px] bg-gradient-to-tr from-blue-900  to-white/50">
               
               <div className="w-full h-full rounded-full overflow-hidden bg-black">
                 <img
@@ -32,7 +32,7 @@ export default function StorySection() {
             </div>
 
             {/* TITLE */}
-            <p className="text-white text-[10px] md:text-xs mt-1 truncate w-[70px]">
+            <p className="text-white text-[15px] md:text-sm mt-1 truncate w-[70px]">
               {story.title}
             </p>
           </div>

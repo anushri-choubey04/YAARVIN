@@ -14,7 +14,7 @@ export default function PriceSection() {
   ];
 
   return (
-    <section className="text-center py-8 px-4 bg-black mx-auto">
+    <section className="text-center py-4 px-4 bg-black mx-auto">
 
       <h2 className="text-4xl md:text-5xl font-extrabold text-white">
         RENT BY PRICE
