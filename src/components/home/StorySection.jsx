@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { stories } from "../../data/storyData";
-//eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
+
 
 export default function StorySection() {
   const navigate = useNavigate();

@@ -1,4 +1,5 @@
 // src/data/dummyProducts.js
+import images from "../utils/images";
 
 const dummyProducts = [
   {
@@ -13,8 +14,8 @@ const dummyProducts = [
     rating: 4.6,
     stock: 5,
     images: [
-      "/images/products/lehenga1.jpg",
-      "/images/products/lehenga1b.jpg"
+      images["Products/lehenga1.jpg"],
+      images["Products/lehenga1b.jpg"]
     ],
     description:
       "Premium bridal designer lehenga available for 48-hour rental. Dry-cleaned after every use."
@@ -32,8 +33,8 @@ const dummyProducts = [
     rating: 4.8,
     stock: 8,
     images: [
-      "/images/products/tuxedo1.jpg",
-      "/images/products/tuxedo1b.jpg"
+      images["Products/tuxedo1.jpg"],
+      images["Products/tuxedo1b.jpg"]
     ],
     description:
       "Stylish tuxedo perfect for weddings, parties and events. Includes blazer + pant."
@@ -51,8 +52,8 @@ const dummyProducts = [
     rating: 4.4,
     stock: 12,
     images: [
-      "/images/products/saree1.jpg",
-      "/images/products/saree1b.jpg"
+      images["Products/saree1.jpg"],
+      images["Products/saree1b.jpg"]
     ],
     description:
       "Elegant silk saree suitable for receptions and festivals. Includes matching blouse piece."

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";//eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { IdCard } from "lucide-react";
+import images from "../../utils/images";
+
 
 
 const products = [
@@ -10,42 +11,42 @@ const products = [
     title: "MAYKR",
     subtitle: "Smart Casual Wear",
     price: "Under ₹599",
-    image: "/QuickView/gown1.png",
+    image: images["QuickView/gown1.png"],
   },
   {
     Id: 2,
     title: "ISHRANSH",
     subtitle: "Women's Fancy Gown",
     price: "Under ₹499",
-    image: "/QuickView/gown2.png",
+    image: images["QuickView/gown2.png"],
   },
   {
     Id: 3,
     title: "FIT & FLARE",
     subtitle: "Designer Dresses",
     price: "Under ₹799",
-    image: "/QuickView/lehnga3.png",
+    image: images["QuickView/lehnga3.png"],
   },
   {
     Id: 4,
     title: "ETHNIC",
     subtitle: "Traditional Wear",
     price: "Under ₹899",
-    image: "/QuickView/lehnga2.png",
+    image: images["QuickView/lehnga2.png"],
   },
   {
     Id: 5,
     title: "STYLE",
     subtitle: "Stylish Collection",
     price: "Under ₹699",
-    image: "/PriceSection/Kurta2.png",
+    image: images["PriceSection/Kurta2.png"],
   },
   {
     Id: 6,
     title: "LUXE WEAR",
     subtitle: "Premium Fashion",
     price: "Under ₹999",
-    image: "/PriceSection/Kurta.png",
+    image: images["PriceSection/Kurta.png"],
   },
 ];
 

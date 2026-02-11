@@ -1,12 +1,14 @@
 //eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import images from "../../utils/images";
+
 
 export default function PriceSection() {
   const prices = [
-  { label: "UNDER 2K", img: "/PriceSection/Kurta.png", link: "/pricesection/under2k" },
-  { label: "UNDER 4K", img: "/PriceSection/Lehnga12.png", link: "/pricesection/under4k" },
-  { label: "UNDER 6K", img: "/PriceSection/Kurta1.png", link: "/pricesection/under6k" },
-  { label: "UNDER 8K", img: "/PriceSection/Suit.png", link: "/pricesection/under8k" },
+  { label: "UNDER 2K", img: images["PriceSection/Kurta.png"], link: "/pricesection/under2k" },
+  { label: "UNDER 4K", img: images["PriceSection/Lehnga12.png"], link: "/pricesection/under4k" },
+  { label: "UNDER 6K", img: images["PriceSection/Kurta1.png"], link: "/pricesection/under6k" },
+  { label: "UNDER 8K", img: images["PriceSection/Suit.png"], link: "/pricesection/under8k" },
 ];
 
 

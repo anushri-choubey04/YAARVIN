@@ -48,6 +48,7 @@ export default function VideoSection() {
       });
     }
   }, []);
+  const BASE = import.meta.env.BASE_URL;
 
   const videoList = [
     "/VideoSection/DRESS1.mp4",
@@ -56,7 +57,7 @@ export default function VideoSection() {
     "/VideoSection/DRESS4.mp4",
     "/VideoSection/DRESS5.mp4",
     "/VideoSection/DRESS6.mp4",
-  ];
+  ].map((v) => BASE + v);
 
   return (
     <section className="w-full py-8 bg-black">
@@ -105,6 +106,7 @@ export default function VideoSection() {
               muted
               loop
               preload="metadata"
+              decoding="async"
               data-src={src}
             />
 

@@ -1,23 +1,25 @@
 import { Link } from "react-router-dom";
 //eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import images from "../../utils/images";
+
 
 export default function HowItWorks() {
   const cards = [
     {
-      img: "/HowItWorks/Dress.png",
+      img: images["HowItWorks/Dress.png"],
       title: "How to Rent",
       text: "Get your hands on designer pieces without breaking the bank.",
       link: "/rent", // route path, NOT file
     },
     {
-      img: "/HowItWorks/TUEXDO.png",
+      img: images["HowItWorks/TUEXDO.png"],
       title: "How to Earn Money",
       text: "Make money from your closet/wardrobe that you can’t wear all the time.",
       link: "/lend",
     },
     {
-      img: "/HowItWorks/lehnga.png",
+      img: images["HowItWorks/lehnga.png"],
       title: "How delivery works",
       text: "Get your rentals delivered right to your doorstep with our convenient delivery service.",
       link: "/delivery",

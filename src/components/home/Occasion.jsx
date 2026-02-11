@@ -2,19 +2,21 @@
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import images from "../../utils/images";
+
 
 
 export default function Category() {
 
   const categories = [
-    { img: "/PriceSection/Kurta2.png", title: "Graduation", slug: "graduation" },
-    { img: "/PriceSection/Kurta1.png", title: "Office Event", slug: "office-event" },
-    { img: "/PriceSection/Kurta.png", title: "Party Wear", slug: "party-wear" },
-    { img: "/HowItWorks/Dress.png", title: "Ethnic Wear", slug: "ethnic-wear" },
-    { img: "/PriceSection/Lehnga11.png", title: "Pre-Wedding", slug: "pre-wedding" },
-    { img: "/PriceSection/Lehnga12.png", title: "Wedding Guest", slug: "wedding-guest" },
-    { img: "/QuickView/lehnga1.png", title: "Date Night", slug: "date-night" },
-    { img: "/Hero/lehnga2.png", title: "Farewell", slug: "farewell" },
+    { img: images["PriceSection/Kurta2.png"], title: "Graduation", slug: "graduation" },
+    { img: images["PriceSection/Kurta1.png"], title: "Office Event", slug: "office-event" },
+    { img: images["PriceSection/Kurta.png"], title: "Party Wear", slug: "party-wear" },
+    { img: images["HowItWorks/Dress.png"], title: "Ethnic Wear", slug: "ethnic-wear" },
+    { img: images["PriceSection/Lehnga11.png"], title: "Pre-Wedding", slug: "pre-wedding" },
+    { img: images["PriceSection/Lehnga12.png"], title: "Wedding Guest", slug: "wedding-guest" },
+    { img: images["QuickView/lehnga1.png"], title: "Date Night", slug: "date-night" },
+    { img: images["Hero/lehnga2.png"], title: "Farewell", slug: "farewell" },
   ];
 
   // parent animation for stagger effect

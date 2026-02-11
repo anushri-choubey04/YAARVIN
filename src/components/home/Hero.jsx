@@ -2,6 +2,8 @@ import { useEffect, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 //eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
+import images from "../../utils/images";
+
 
 const SLIDE_INTERVAL = 4200;
 
@@ -12,37 +14,37 @@ export default function Hero() {
   const slides = [
     {
       id: 1,
-      img: "/Hero/lehnga1.png",
+      img: images["Hero/lehnga1.png"],
       title: "Ethnic Fits",
       subtitle: "Lehengas • Sarees • Suits",
     },
     {
       id: 2,
-      img: "/QuickView/gown2.png",
+      img: images["QuickView/gown2.png"],
       title: "Classic  Vibes",
       subtitle: "Grace for every occasion",
     },
     {
       id: 3,
-      img: "/Hero/lehnga3.png",
+      img: images["Hero/lehnga3.png"],
       title: "Ethnic Party Look",
       subtitle: "Dresses • Mini • Glam",
     },
     {
       id: 4,
-      img: "/Hero/gown1.png",
+      img: images["Hero/gown1.png"],
       title: "Evening Gowns",
       subtitle: "Luxury silhouettes",
     },
     {
       id: 5,
       title: "Kurta",
-      img: "/PriceSection/Kurta2.png",
+      img: images["PriceSection/Kurta2.png"],
     },
     {
       id: 6,
       title: "Kurta Set",
-      img: "/PriceSection/Kurta.png",
+      img: images["PriceSection/Kurta.png"],
     },
   ];
 

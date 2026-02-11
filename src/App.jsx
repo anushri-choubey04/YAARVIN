@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { useDispatch } from "react-redux";
-import { loadUser } from "./actions/userActions";
+//import { useDispatch } from "react-redux";
+//import { loadUser } from "./actions/userActions";
 
 import Login from "./components/auth/LoginForm";
 import Register from "./components/auth/RegisterForm";
@@ -80,8 +80,8 @@ import SingleProductPage from "./components/product/SingleProductPage";
 import { CartProvider } from "./context/CartContext";
 
 function App() {
-  const dispatch = useDispatch();
-  const { pathname } = useLocation();
+  //const dispatch = useDispatch();
+  
   const [showAuth, setShowAuth] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -104,19 +104,12 @@ function App() {
     return () => clearTimeout(timer);
   }, [loading]);
 
-  useEffect(() => {
-    dispatch(loadUser());
+ // useEffect(() => {
+ //  dispatch(loadUser());
     // getStripeApiKey();
-  }, [dispatch]);
+ // }, [dispatch]);
 
-  // always scroll to top on route/path change
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, [pathname]);
+  
 
   useEffect(() => {
     document.body.style.overflow =

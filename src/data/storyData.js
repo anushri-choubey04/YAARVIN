@@ -1,8 +1,11 @@
+import images from "../utils/images";
+
+
 export const stories = [
   {
     id: "women-ethnic",
     title: "Women",
-    image: "/Hero/lehnga1.png",
+    image: images["Hero/lehnga1.png"],
     sizes: ["S", "M", "L"],
     filters: {
       gender: "Women",
@@ -12,7 +15,7 @@ export const stories = [
   {
     id: "men-formal",
     title: "Men",
-    image: "/PriceSection/Kurta.png",
+    image: images["PriceSection/Kurta.png"],
     sizes: ["S", "M", "L"],
     filters: {
       gender: "Men",
@@ -21,7 +24,7 @@ export const stories = [
   {
     id: "party-wear",
     title: "Party Wear",
-    image: "/PriceSection/Kurta1.png",
+    image: images["PriceSection/Kurta1.png"],
     sizes: ["S", "M", "L"],
     filters: {
       minRating: 4.5,

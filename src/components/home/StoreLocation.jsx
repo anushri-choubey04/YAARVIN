@@ -1,4 +1,5 @@
-import React from "react";
+import images from "../../utils/images";
+
 
 export default function StoreLocation() {
   return (
@@ -11,7 +12,7 @@ export default function StoreLocation() {
         {/* Store Icon */}
         <div className="flex justify-center mb-4">
           <img
-            src="/store.png"
+            src={images["StoreLocation/store.png"]}
             alt="Store Icon"
             className="w-16 h-16"
           />
@@ -34,7 +35,7 @@ export default function StoreLocation() {
             controls
             className="w-full h-60 object-cover"
           >
-            <source src="/saarvin.mp4" type="video/mp4" />
+            <source src="#" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
