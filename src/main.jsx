@@ -24,7 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             horizontal: "center",
           }}
         >
-          <Router>
+          <Router  basename="/YAARVIN">
             <AuthProvider>
               <WishlistProvider>
               <App />
