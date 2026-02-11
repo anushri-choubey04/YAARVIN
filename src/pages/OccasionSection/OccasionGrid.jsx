@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import ProductGrid from "../../components/product/ProductGrid";
+import images from "../../utils/images";
 
 const CATEGORY_TITLES = {
   graduation: "Graduation",
@@ -20,7 +21,7 @@ const PRODUCTS = [
     gender: "Women",
     size: "M",
     category: "graduation",
-    img: "/Hero/gown1.png",
+    img: images["Hero/gown1.png"],
   },
   {
     id: 2,
@@ -29,7 +30,7 @@ const PRODUCTS = [
     gender: "Men",
     size: "L",
     category: "office-event",
-    img: "/HowItWorks/TUEXDO.png",
+    img: images["HowItWorks/TUEXDO.png"],
   },
   {
     id: 3,
@@ -38,7 +39,7 @@ const PRODUCTS = [
     gender: "Women",
     size: "S",
     category: "party-wear",
-    img: "/HowItWorks/Dress.png",
+    img: images["HowItWorks/Dress.png"],
   },
   {
     id: 4,
@@ -47,7 +48,7 @@ const PRODUCTS = [
     gender: "Men",
     size: "L",
     category: "wedding-guest",
-    img: "/PriceSection/Kurta1.png",
+    img: images["PriceSection/Kurta1.png"],
   },
   {
     id: 5,
@@ -56,7 +57,7 @@ const PRODUCTS = [
     gender: "Men",
     size: "XL",
     category: "ethnic-wear",
-    img: "/PriceSection/Kurta.png",
+    img: images["PriceSection/Kurta.png"],
   },
   {
     id: 6,
@@ -65,7 +66,7 @@ const PRODUCTS = [
     gender: "Women",
     size: "M",
     category: "pre-wedding",
-    img: "/PriceSection/Lehenga.png",
+    img: images["PriceSection/Lehenga.png"],
   },
   {
     id: 7,
@@ -74,7 +75,7 @@ const PRODUCTS = [
     gender: "Women",
     size: "L",
     category: "date-night",
-    img: "/PriceSection/Gown.png",
+    img: images["PriceSection/Gown.png"],
   },
   {
     id: 8,
@@ -83,7 +84,7 @@ const PRODUCTS = [
     gender: "Men",
     size: "M",
     category: "farewell",
-    img: "/PriceSection/Suit.png",
+    img: images["PriceSection/Suit.png"],
   },
   
 ];

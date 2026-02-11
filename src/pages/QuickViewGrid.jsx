@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import ProductGrid from "../components/product/ProductGrid";
+import images from "../utils/images";
 
 const QUICK_VIEW_PRODUCTS = [
   {
@@ -7,7 +8,7 @@ const QUICK_VIEW_PRODUCTS = [
     title: "MAYKR",
     subtitle: "Smart Casual Wear",
     price: 599,
-    image: "/QuickView/gown1.png",
+    image: images["QuickView/gown1.png"],
     sizes: "S",
   },
   {
@@ -15,7 +16,7 @@ const QUICK_VIEW_PRODUCTS = [
     title: "ISHRANSH",
     subtitle: "Women's Fancy Gown",
     price: 499,
-    image: "/QuickView/gown2.png",
+    image: images["QuickView/gown2.png"],
     sizes: ["S", "M", "L","XL"],
   },
   {
@@ -23,7 +24,7 @@ const QUICK_VIEW_PRODUCTS = [
     title: "FIT & FLARE",
     subtitle: "Designer Dresses",
     price: 799,
-    image: "/QuickView/lehnga3.png",
+    image: images["QuickView/lehnga3.png"],
     sizes: ["S", "M", "L","XL"],
   },
   {
@@ -31,7 +32,7 @@ const QUICK_VIEW_PRODUCTS = [
     title: "ETHNIC",
     subtitle: "Traditional Wear",
     price: 899,
-    image: "/QuickView/lehnga2.png",
+    image: images["QuickView/lehnga2.png"],
     sizes: ["S", "M", "L","XL"],
   },
   {
@@ -39,7 +40,7 @@ const QUICK_VIEW_PRODUCTS = [
     title: "STYLE",
     subtitle: "Stylish Collection",
     price: 699,
-    image: "/PriceSection/Kurta2.png",
+    image: images["PriceSection/Kurta2.png"],
     sizes: ["S", "M", "L","XL"],
   },
   {
@@ -47,7 +48,7 @@ const QUICK_VIEW_PRODUCTS = [
     title: "LUXE WEAR",
     subtitle: "Premium Fashion",
     price: 999,
-    image: "/PriceSection/Kurta.png",
+    image: images["PriceSection/Kurta.png"],
     sizes: ["S", "M", "L","XL"],
   },
 ];

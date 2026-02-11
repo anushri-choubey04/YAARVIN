@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import ProductGrid from "../../components/product/ProductGrid";
+import images from "../../utils/images";
 
 const ALL_PRODUCTS = [
   {
@@ -7,7 +8,7 @@ const ALL_PRODUCTS = [
   
     title: "Smart Wear",
     price: 1999,
-    image: "/QuickView/gown1.png",
+    image: images["QuickView/gown1.png"],
     size: "M",
   },
   {
@@ -15,7 +16,7 @@ const ALL_PRODUCTS = [
     
     title: "Women's Fancy Gown",
     price: 3499,
-    image: "/QuickView/gown2.png",
+    image: images["QuickView/gown2.png"],
     size: "L",
   },
   {
@@ -23,7 +24,7 @@ const ALL_PRODUCTS = [
     title: "ETHNIC SET",
     
     price: 5999,
-    image: "/PriceSection/Lehnga12.png",
+    image: images["PriceSection/Lehnga12.png"],
     size: "S",
   },
   {
@@ -31,7 +32,7 @@ const ALL_PRODUCTS = [
     title: "DESIGNER SUIT",
     
     price: 7999,
-    image: "/PriceSection/Suit.png",
+    image: images["PriceSection/Suit.png"],
     size: "XL",
   },
   {
@@ -39,7 +40,7 @@ const ALL_PRODUCTS = [
    
     title: "Evening Gown",
     price: 2499,
-    image: "/Hero/gown2.png",
+    image: images["Hero/gown2.png"],
     size: "M",
   },
   {
@@ -47,7 +48,7 @@ const ALL_PRODUCTS = [
     title: "Party Dress",
     
     price: 3999,
-    image: "/HowItWorks/Dress.png",
+    image: images["HowItWorks/Dress.png"],
     size: "L",
   },
 ];

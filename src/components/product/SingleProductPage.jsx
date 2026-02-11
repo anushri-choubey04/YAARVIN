@@ -6,6 +6,7 @@ import SwipeGallery from "./SwipeGallery";
 import SizeGuideModal from "./SizeGuideModal";
 import DeliveryTimeline from "./DeliveryTimeline";
 import StickyRentBar from "./StickyRentBar";
+import images from "../../utils/images";
 
 const ALL_PRODUCTS = [
   {
@@ -14,10 +15,10 @@ const ALL_PRODUCTS = [
     price: 1999,
     security: 1500,
     images: [
-      "/Hero/lehnga1.png",
-      "/Hero/lehnga1.png",
-      "/Hero/lehnga1.png",
-      "/Hero/lehnga1.png",
+      images["Hero/lehnga1.png"],
+      images["Hero/lehnga1.png"],
+      images["Hero/lehnga1.png"],
+      images["Hero/lehnga1.png"],
     ],
     desc: "Smart casual wear for modern occasions. Perfect for parties & celebrations.",
     condition: "Excellent",
@@ -36,10 +37,10 @@ const ALL_PRODUCTS = [
     price: 999,
     security: 1500,
     images: [
-      "/QuickView/gown2.png",
-      "/QuickView/gown2.png",
-      "/QuickView/gown2.png",
-      "/QuickView/gown2.png",
+      images["QuickView/gown2.png"],
+      images["QuickView/gown2.png"],
+      images["QuickView/gown2.png"],
+      images["QuickView/gown2.png"],
     ],
     desc: "Smart casual wear for modern occasions. Perfect for parties & celebrations.",
     condition: "Excellent",
@@ -58,10 +59,10 @@ const ALL_PRODUCTS = [
     price: 2999,
     security: 1500,
     images: [
-      "/Hero/lehnga3.png",
-      "/Hero/lehnga3.png",
-      "/Hero/lehnga3.png",
-      "/Hero/lehnga3.png",
+      images["Hero/lehnga3.png"],
+      images["Hero/lehnga3.png"],
+      images["Hero/lehnga3.png"],
+      images["Hero/lehnga3.png"],
     ],
     desc: "Smart casual wear for modern occasions. Perfect for parties & celebrations.",
     condition: "Excellent",
@@ -80,10 +81,10 @@ const ALL_PRODUCTS = [
     price: 1999,
     security: 1500,
     images: [
-      "/Hero/gown1.png",
-      "/Hero/gown1.png",
-      "/Hero/gown1.png",
-      "/Hero/gown1.png",
+      images["Hero/gown1.png"],
+      images["Hero/gown1.png"],
+      images["Hero/gown1.png"],
+      images["Hero/gown1.png"],
     ],
     desc: "Smart casual wear for modern occasions. Perfect for parties & celebrations.",
     condition: "Excellent",
@@ -102,10 +103,10 @@ const ALL_PRODUCTS = [
     price: 1999,
     security: 1500,
     images: [
-      "/PriceSection/Kurta2.png",
-      "/PriceSection/Kurta2.png",
-      "/PriceSection/Kurta2.png",
-      "/PriceSection/Kurta2.png",
+      images["PriceSection/Kurta2.png"],
+      images["PriceSection/Kurta2.png"],
+      images["PriceSection/Kurta2.png"],
+      images["PriceSection/Kurta2.png"],
     ],
     desc: "Smart casual wear for modern occasions. Perfect for parties & celebrations.",
     condition: "Excellent",
@@ -124,10 +125,10 @@ const ALL_PRODUCTS = [
     price: 3999,
     security: 1500,
     images: [
-      "/PriceSection/Kurta.png",
-      "/PriceSection/Kurta.png",
-      "/PriceSection/Kurta.png",
-      "/PriceSection/Kurta.png",
+      images["PriceSection/Kurta.png"],
+      images["PriceSection/Kurta.png"],
+      images["PriceSection/Kurta.png"],
+      images["PriceSection/Kurta.png"],
     ],
     desc: "Smart casual wear for modern occasions. Perfect for parties & celebrations.",
     condition: "Excellent",

@@ -42,13 +42,14 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative overflow-hidden  bg-black/5 ">
-      <div className="relative w-full md:h-[350px] h-[620px]  ">
-        <div className="absolute inset-0 -z-10 pointer-events-none">
-          <DarkVeil speed={1.8} scanlineFrequency={0.8} />
+    <footer className="relative   bg-black/5 ">
+      <div className="relative  w-full md:h-[350px] h-[620px]  ">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <DarkVeil speed={1.8} scanlineFrequency={0.8} noiseIntensity={0}
+  scanlineIntensity={0} />
         </div>
         {/* Social icons */}
-        <div className="flex justify-center gap-6 text-2xl mb-10 pt-8 text-white ">
+        <div className="relative z-10 flex justify-center gap-6 text-2xl mb-6 pt-8 text-white ">
           <i className="fab fa-instagram cursor-pointer hover:text-gray-400" />
           <i className="fab fa-linkedin-in cursor-pointer hover:text-gray-400" />
           <i className="fab fa-youtube cursor-pointer hover:text-gray-400" />
@@ -166,7 +167,7 @@ export default function Footer() {
         </div>
 
         {/* bottom line */}
-        <div className="mb-15 md:m-5  text-center text-gray-300 text-sm">
+        <div className=" relative z-10 mb-15 md:m-5  text-center text-gray-300 text-sm">
           © 2025 Saarvin — All Rights Reserved
         </div>
       </div>

@@ -6,10 +6,8 @@ export default function StorySection() {
   const navigate = useNavigate();
 
   return (
-    <section className="mx-auto px-4 py-4  bg-black text-center">
-      
-      
-      <div className="flex gap-4 overflow-x-auto max-w-7xl md:px-8">
+    <section className="w-full py-4  bg-black text-center">
+      <div className="flex gap-4 overflow-x-auto px-3 md:px-8 scrollbar-hide">
         {stories.map((story) => (
           <div
             key={story.id}
@@ -18,23 +16,30 @@ export default function StorySection() {
                 state: { storyFilters: story.filters, heading: story.title },
               })
             }
-            className="min-w-[120px] cursor-pointer scroll-hidden scrollbar-hide rounded-lg border-2 hover:border-blue-600 transition overflow-hidden"
+            className="flex flex-col items-center min-w-[72px] cursor-pointer"
           >
-            <div className="h-[120px] rounded-b-xl  overflow-hidden ">
-              <img
-                src={story.image}
-                alt={story.title}
-                className="h-full w-full object-cover hover:scale-105 transition"
-              />
+            {/* STORY CIRCLE */}
+            <div className="w-[64px] h-[64px] md:w-[80px] md:h-[80px] rounded-full p-[2px] bg-gradient-to-tr from-blue-900  to-white/50">
+              
+              <div className="w-full h-full rounded-full overflow-hidden bg-black">
+                <img
+                  src={story.image}
+                  alt={story.title}
+                  className="w-full h-full object-cover hover:scale-110 transition"
+                />
+              </div>
+
             </div>
 
-            <p className="mt-2 text-center font-medium text-white">
+            {/* TITLE */}
+            <p className="text-white text-[10px] md:text-xs mt-1 truncate w-[70px]">
               {story.title}
             </p>
-    
           </div>
         ))}
       </div>
+      
+      
     </section>
   );
 }

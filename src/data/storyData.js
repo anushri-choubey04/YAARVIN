@@ -3,7 +3,7 @@ import images from "../utils/images";
 
 export const stories = [
   {
-    id: "women-ethnic",
+    id: 1,
     title: "Women",
     image: images["Hero/lehnga1.png"],
     sizes: ["S", "M", "L"],
@@ -13,7 +13,7 @@ export const stories = [
     },
   },
   {
-    id: "men-formal",
+    id: 2,
     title: "Men",
     image: images["PriceSection/Kurta.png"],
     sizes: ["S", "M", "L"],
@@ -22,7 +22,7 @@ export const stories = [
     },
   },
   {
-    id: "party-wear",
+    id: 3,
     title: "Party Wear",
     image: images["PriceSection/Kurta1.png"],
     sizes: ["S", "M", "L"],

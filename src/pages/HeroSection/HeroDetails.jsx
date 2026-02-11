@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SimilarProducts from "../../components/product/SimilarProducts";
+import images from "../../utils/images";
+
 
 export default function HeroDetails() {
   const navigate = useNavigate();
@@ -43,10 +45,10 @@ export default function HeroDetails() {
 
   /* ================= SIMILAR PRODUCTS ================= */
   const products = [
-    { id: 1, img: "/QuickView/gown1.png", title: "Luna Satin Gown", price: "₹999 / 48 hrs" },
-    { id: 2, img: "/QuickView/gown2.png", title: "Amara Maxi Dress", price: "₹899 / 48 hrs" },
-    { id: 3, img: "/QuickView/lehnga1.png", title: "Celeste Party Wear", price: "₹1099 / 48 hrs" },
-    { id: 4, img: "/QuickView/lehnga2.png", title: "Chloe Evening Lehenga", price: "₹1199 / 48 hrs" },
+    { id: 1, img: images["QuickView/gown1.png"], title: "Luna Satin Gown", price: "₹999 / 48 hrs" },
+    { id: 2, img: images["QuickView/gown2.png"], title: "Amara Maxi Dress", price: "₹899 / 48 hrs" },
+    { id: 3, img: images["QuickView/lehnga1.png"], title: "Celeste Party Wear", price: "₹1099 / 48 hrs" },
+    { id: 4, img: images["QuickView/lehnga2.png"], title: "Chloe Evening Lehenga", price: "₹1199 / 48 hrs" },
   ];
 
   const readyToRent = selectedSize && rentPeriod && startDate && endDate;

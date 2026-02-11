@@ -1,5 +1,5 @@
-import { useRef, useEffect } from 'react';
-import { Renderer, Program, Mesh, Triangle, Vec2 } from 'ogl';
+import { useRef, useEffect } from "react";
+import { Renderer, Program, Mesh, Triangle, Vec2 } from "ogl";
 
 const vertex = `
 attribute vec2 position;
@@ -80,7 +80,7 @@ export default function DarkVeil({
   speed = 0.5,
   scanlineFrequency = 0,
   warpAmount = 0,
-  resolutionScale = 1
+  resolutionScale = 1,
 }) {
   const ref = useRef(null);
   useEffect(() => {
@@ -88,8 +88,10 @@ export default function DarkVeil({
     const parent = canvas.parentElement;
 
     const renderer = new Renderer({
-      dpr: Math.min(window.devicePixelRatio, 2),
-      canvas
+      dpr: Math.min(window.devicePixelRatio, 1.5),
+      canvas,
+      antialias: false,
+      powerPreference: "high-performance",
     });
 
     const gl = renderer.gl;
@@ -105,27 +107,30 @@ export default function DarkVeil({
         uNoise: { value: noiseIntensity },
         uScan: { value: scanlineIntensity },
         uScanFreq: { value: scanlineFrequency },
-        uWarp: { value: warpAmount }
-      }
+        uWarp: { value: warpAmount },
+      },
     });
 
     const mesh = new Mesh(gl, { geometry, program });
 
     const resize = () => {
-      const w = parent.clientWidth,
-        h = parent.clientHeight;
+      const rect = parent.getBoundingClientRect();
+      const w = rect.width;
+      const h = rect.height || window.innerHeight * 0.4;
+
       renderer.setSize(w * resolutionScale, h * resolutionScale);
       program.uniforms.uResolution.value.set(w, h);
     };
 
-    window.addEventListener('resize', resize);
+    window.addEventListener("resize", resize);
     resize();
 
     const start = performance.now();
     let frame = 0;
 
     const loop = () => {
-      program.uniforms.uTime.value = ((performance.now() - start) / 1000) * speed;
+      program.uniforms.uTime.value =
+        ((performance.now() - start) / 1000) * speed;
       program.uniforms.uHueShift.value = hueShift;
       program.uniforms.uNoise.value = noiseIntensity;
       program.uniforms.uScan.value = scanlineIntensity;
@@ -139,8 +144,22 @@ export default function DarkVeil({
 
     return () => {
       cancelAnimationFrame(frame);
-      window.removeEventListener('resize', resize);
+      window.removeEventListener("resize", resize);
     };
-  }, [hueShift, noiseIntensity, scanlineIntensity, speed, scanlineFrequency, warpAmount, resolutionScale]);
-  return <canvas ref={ref} className="w-full h-full block" />;
+  }, [
+    hueShift,
+    noiseIntensity,
+    scanlineIntensity,
+    speed,
+    scanlineFrequency,
+    warpAmount,
+    resolutionScale,
+  ]);
+  return (
+    <canvas
+      ref={ref}
+      className="w-full h-full block will-change-transform"
+      style={{ transform: "translateZ(0)" }}
+    />
+  );
 }

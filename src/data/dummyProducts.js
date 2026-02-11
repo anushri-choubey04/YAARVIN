@@ -3,7 +3,7 @@ import images from "../utils/images";
 
 const dummyProducts = [
   {
-    id: "p1",
+    id: 1,
     title: "Designer Lehenga",
     category: "Women",
     type: "Lehenga",
@@ -14,15 +14,15 @@ const dummyProducts = [
     rating: 4.6,
     stock: 5,
     images: [
-      images["Products/lehenga1.jpg"],
-      images["Products/lehenga1b.jpg"]
+      images["Hero/lehnga1.png"],
+      images["Hero/lehnga1.png"]
     ],
     description:
       "Premium bridal designer lehenga available for 48-hour rental. Dry-cleaned after every use."
   },
 
   {
-    id: "p2",
+    id: 2,
     title: "Black Tuxedo Suit",
     category: "Men",
     type: "Tuxedo",
@@ -41,7 +41,7 @@ const dummyProducts = [
   },
 
   {
-    id: "p3",
+    id: 3,
     title: "Saree – Silk Party Wear",
     category: "Women",
     type: "Saree",
@@ -52,8 +52,8 @@ const dummyProducts = [
     rating: 4.4,
     stock: 12,
     images: [
-      images["Products/saree1.jpg"],
-      images["Products/saree1b.jpg"]
+      images["Hero/suit.jpg"],
+      images["Hero/saree1b.png"]
     ],
     description:
       "Elegant silk saree suitable for receptions and festivals. Includes matching blouse piece."

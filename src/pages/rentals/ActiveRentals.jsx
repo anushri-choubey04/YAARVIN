@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import PageHeader from "../../components/common/PageHeader";
+import images from "../../utils/images";
 
 const ACTIVE_RENTALS = [
   {
     id: "r1",
     title: "Designer Lehenga",
-    image: "/QuickView/lehnga1.png",
+    image: images["QuickView/lehnga1.png"],
     rentTill: "2026-01-20",
     deposit: 2000,
     status: "Active",
@@ -13,7 +14,7 @@ const ACTIVE_RENTALS = [
   {
     id: "r2",
     title: "Party Gown",
-    image: "/QuickView/gown1.png",
+    image: images["QuickView/gown1.png"],
     rentTill: "2026-01-18",
     deposit: 1500,
     status: "Return Soon",
