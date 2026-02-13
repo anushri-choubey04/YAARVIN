@@ -1,90 +1,60 @@
 import { NavLink } from "react-router-dom";
-import { Home, Search, PlusCircle, Heart, User } from "lucide-react";
+import { Home, Grid, PlusSquare, Heart, User } from "lucide-react";
 
 const BottomNavbar = () => {
   return (
-    <nav
-      className="
-        fixed bottom-0 left-0 right-0
-        bg-black backdrop-blur
-        border-t border-gray-300
-        shadow-[0_-2px_10px_rgba(0,0,0,0.15)]
-        h-16
-        flex items-center justify-around
-        z-50
-        md:hidden
-      "
-    >
-      {/* Home */}
-      <NavLink
-        to="/"
-        className={({ isActive }) =>
-          `flex flex-col items-center text-sm font-semibold
-          transition-all text-white
-          ${isActive ? "hover:text-blue-800" : "text-white"}`
-        }
-      >
-        <Home className="w-5 h-5" />
-        <span>Home</span>
-      </NavLink>
+    <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full  z-[100] bg-black border-t  shadow-[0_-4px_10px_rgba(0,0,0,0.5)] md:hidden font-jakarta border-white">
+      <div className="flex justify-around items-center min-h-[74px] px-2 w-100% uppercase tracking-wide font-bold">
+        
+        {/* Home */}
+        <NavLink to="/" className="flex flex-col items-center justify-center gap-1">
+          {({ isActive }) => (
+            <>
+              <Home size={22} className={isActive ? "text-[#00A143]" : "text-gray-200"} strokeWidth={isActive ? 2.5 : 2} />
+              <span className={`text-[12px]   ${isActive ? "text-[#00A143]" : "text-gray-200"}`}>Home</span>
+            </>
+          )}
+        </NavLink>
 
-      {/* Rent / Products */}
-      <NavLink
-        to="/categories"
-        className={({ isActive }) =>
-          `flex flex-col items-center text-sm font-semibold
-          transition-all 
-          ${isActive ? "text-blue-800" : "text-white"}`
-        }
-      >
-        <Search className="w-5 h-5" />
-        <span>Category</span>
-      </NavLink>
+        {/* Categories */}
+        <NavLink to="/categories" className="flex flex-col items-center justify-center gap-1">
+          {({ isActive }) => (
+            <>
+              <Grid size={22} className={isActive ? "text-[#00A143]" : "text-gray-200"} strokeWidth={isActive ? 2.5 : 2} />
+              <span className={`text-[12px]  ${isActive ? "text-[#00A143]" : "text-gray-200"}`}>Category</span>
+            </>
+          )}
+        </NavLink>
 
-      {/* Center Add Button */}
-      <NavLink
-        to="/upload"
-        className="
-          flex flex-col items-center
-          -mt-4
-          bg-blue-800
-          text-white rounded-2xl
-          px-4 py-3
-          border border-white/40
-          shadow-lg
-          active:scale-95
-          transition
-        "
-      >
-        <PlusCircle className="w-6 h-6" />
-        <span className="text-xs font-bold">Feed</span>
-      </NavLink>
+        {/* Center Action Button (Feed) */}
+        <NavLink
+          to="/upload"
+          className="flex flex-col items-center justify-center h-[56px] w-[56px] bg-blue-600 text-white rounded-full  border-4 border-blue-900 shadow-xl active:scale-90 transition-transform"
+        >
+          <PlusSquare size={22} />
+          <span className="text-[12px] font-bold mt-1">Feed</span>
+        </NavLink>
 
-      {/* Wishlist */}
-      <NavLink
-        to="/wishlist"
-        className={({ isActive }) =>
-          `flex flex-col items-center text-sm font-semibold
-          transition-all 
-          ${isActive ? "text-blue-800" : "text-white"}`
-        }
-      >
-        <Heart className="w-5 h-5" />
-        <span>Wishlist</span>
-      </NavLink>
+        {/* Wishlist */}
+        <NavLink to="/wishlist" className="flex flex-col items-center justify-center gap-1">
+          {({ isActive }) => (
+            <>
+              <Heart size={22} className={isActive ? "text-[#00A143]" : "text-gray-200"} strokeWidth={isActive ? 2.5 : 2} />
+              <span className={`text-[12px]  ${isActive ? "text-[#00A143]" : "text-gray-200"}`}>Wishlist</span>
+            </>
+          )}
+        </NavLink>
 
-      {/* Profile */}
-      <NavLink
-        to="/account"
-        className={({ isActive }) =>
-          `flex flex-col items-center text-sm font-semibold
-          transition-all 
-          ${isActive ? "text-blue-800" : "text-white"}`
-        }
-      >
-        <User className="w-5 h-5" />
-        <span>Account</span>
-      </NavLink>
+        {/* Profile */}
+        <NavLink to="/account" className="flex flex-col items-center justify-center gap-1">
+          {({ isActive }) => (
+            <>
+              <User size={22} className={isActive ? "text-[#00A143]" : "text-gray-200"} strokeWidth={isActive ? 2.5 : 2} />
+              <span className={`text-[12px]  ${isActive ? "text-[#00A143]" : "text-gray-200"}`}>Account</span>
+            </>
+          )}
+        </NavLink>
+      </div>
     </nav>
   );
 };

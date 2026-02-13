@@ -2,43 +2,44 @@ import React, { useState } from "react";
 //eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import images from "../../utils/images";
 
 // Dummy category data
 const categories = [
   {
     id: 1,
     title: "Party Wear",
-    image: "/Hero/gown1.png",
+    image: images["Hero/gown1.png"],
     subtitle: "Gowns, Dresses & More",
   },
   {
     id: 2,
     title: "Ethnic Wear",
-    image: "/PriceSection/Lehnga11.png",
+    image: images["PriceSection/Lehnga11.png"],
     subtitle: "Sarees, Lehengas & Kurtis",
   },
   {
     id: 3,
     title: "Office Event",
-    image: "/HowItWorks/TUEXDO.png",
+    image: images["HowItWorks/TUEXDO.png"],
     subtitle: "Blazers, Shirts & Suits",
   },
   {
     id: 4,
     title: "Pre-Wedding",
-    image: "/HowItWorks/Dress.png",
+    image: images["HowItWorks/Dress.png"],
     subtitle: "Cocktail Dresses & Accessories",
   },
   {
     id: 5,
     title: "Date Night",
-    image: "/QuickView/gown2.png",
+    image: images["QuickView/gown2.png"],
     subtitle: "Chic Outfits & Tops",
   },
   {
     id: 6,
     title: "Wedding Guest",
-    image: "/PriceSection/Kurta.png",
+    image: images["PriceSection/Kurta.png"],
     subtitle: "Elegant & Trendy Wear",
   },
 ];
@@ -60,7 +61,7 @@ const CategorySection = () => {
           onClick={() => navigate(-1)}
           className="flex items-center gap-2 text-white mb-4 md:text-xl"
         >
-          <i className="fas fa-arrow-left" /> Back
+          <i className="fas fa-arrow-left" />
         </button>
 
         <h1 className="text-4xl font-bold">Category</h1>

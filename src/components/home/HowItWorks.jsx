@@ -27,7 +27,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="working-section" className="py-4 px-2 bg-black">
+    <section id="working-section" className="w-full bg-black py-2 md:px-10 lg:px-12 px-4 overflow-hidden">
       <h2 className="text-center text-4xl md:text-5xl font-extrabold relative text-white mb-6">
         How It Works
         <motion.div
@@ -38,7 +38,7 @@ export default function HowItWorks() {
         />
       </h2>
 
-      <div className="flex flex-col  md:flex-row md:max-w-7xl mx-auto gap-6 md:justify-center md:overflow-x-auto px-2 md:py-10 py-4">
+      <div className="flex flex-col  md:flex-row md:max-w-7xl mx-auto gap-6 md:justify-center md:overflow-x-auto  md:py-10 py-4">
         {cards.map((c, i) => (
           <div
             key={i}

@@ -73,32 +73,51 @@ export default function Hero() {
     return () => window.removeEventListener("keydown", k);
   }, [next]);
 
+  // Handle drag end for swipe
+  const handleDragEnd = (event, info) => {
+    const { offset, velocity } = info;
+    const swipeThreshold = 50; // Minimum distance to trigger swipe
+    const swipeVelocityThreshold = 500; // Minimum velocity to trigger swipe
+
+    if (offset.x > swipeThreshold || velocity.x > swipeVelocityThreshold) {
+      prev(); // Swipe right to go to previous
+    } else if (offset.x < -swipeThreshold || velocity.x < -swipeVelocityThreshold) {
+      next(); // Swipe left to go to next
+    }
+  };
+
   return (
-    <section className="relative h-[50vh] md:h-[70vh] overflow-hidden bg-black">
+    <section className="relative h-[50vh] md:h-[70vh] overflow-hidden py-2 px-2 bg-black">
       {/* Slides */}
       <AnimatePresence initial={false}>
         <motion.div
           key={index}
+          custom={index}
           initial={{ opacity: 0.6, scale: 1 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.9, ease: "easeInOut" }}
+          drag="x" // Enable horizontal dragging
+          dragConstraints={{ left: 0, right: 0 }} // Prevent vertical drag, allow horizontal
+          dragElastic={0.2} // Add some elasticity
+          onDragEnd={handleDragEnd} // Handle swipe logic
           className="absolute inset-0 md:mx-12 m-4"
         >
           <img
             src={slides[index].img}
+            alt={slides[index].title} // Added for SEO and accessibility
             className="h-full w-full object-cover rounded-xl"
             loading="eager"
           />
 
           {/* gradient overlay */}
-          <div className="absolute bg-black" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
         </motion.div>
       </AnimatePresence>
 
       {/* Content */}
       <div className="absolute inset-0 flex items-end md:items-center">
-        <div className="px-12 md:px-20 pb-14 md:pb-0 max-w-2xl text-white">
+        <div className="px-14 md:px-20 pb-14 md:pb-0 max-w-2xl text-white">
           <motion.h1
             key={slides[index].title}
             initial={{ y: 30, opacity: 0 }}
@@ -109,6 +128,18 @@ export default function Hero() {
             {slides[index].title}
           </motion.h1>
 
+          {slides[index].subtitle && (
+            <motion.p
+              key={slides[index].subtitle}
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-sm md:text-lg mb-4 md:mb-6"
+            >
+              {slides[index].subtitle}
+            </motion.p>
+          )}
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -117,14 +148,16 @@ export default function Hero() {
           >
             <button
               onClick={() => navigate(`/single-product/${slides[index].id}`)}
-              className="bg-white text-black font-semibold px-4 py-4 rounded-xl hover:scale-105 transition shadow-2xl items-center justify-center"
-            >
+              className="bg-white text-black font-semibold px-4 py-4  rounded-xl hover:scale-105 transition shadow-2xl items-center justify-center"
+              aria-label={`Rent ${slides[index].title} now`}
+             >
               Rent Now
             </button>
 
             <button
               onClick={() => navigate("/lend")}
-              className="border border-white/70 px-4 py-4 rounded-xl hover:bg-white hover:text-black transition"
+              className="border border-white/70 px-4 py-4  rounded-xl hover:bg-white hover:text-black transition"
+              aria-label={`Earn money by lending your product ${slides[index].title}`}
             >
               Earn Money
             </button>
@@ -133,20 +166,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Arrows */}
-      <button
-        onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2  p-8 w-10 rounded-full text-7xl text-white hover:scale-110 transition"
-      >
-        ‹
-      </button>
-
-      <button
-        onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2  p-12 w-10 text-7xl text-white rounded-full hover:scale-110 transition"
-      >
-        ›
-      </button>
+      
 
       {/* Progress Bar */}
       <div className="absolute bottom-5 left-1/2 -translate-x-1/2 w-40 h-[3px] bg-white/30 rounded-full overflow-hidden">

@@ -6,7 +6,7 @@ export default function StorySection() {
   const navigate = useNavigate();
 
   return (
-    <section className="w-full py-4  bg-black text-center">
+    <section className="w-full py-2 px-2  bg-black text-center">
       <div className="flex gap-4 overflow-x-auto px-3 md:px-8 scrollbar-hide">
         {stories.map((story) => (
           <div
@@ -32,7 +32,7 @@ export default function StorySection() {
             </div>
 
             {/* TITLE */}
-            <p className="text-white text-[15px] md:text-sm mt-1 truncate w-[70px]">
+            <p className="text-white text-[14px] md:text-sm mt-1 truncate w-[70px]">
               {story.title}
             </p>
           </div>

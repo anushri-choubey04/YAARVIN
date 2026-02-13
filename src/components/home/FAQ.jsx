@@ -34,7 +34,7 @@ export default function FAQ() {
 
   return (
     <motion.section
-      className="relative mx-auto py-4 px-4 overflow-hidden bg-black"
+      className="relative w-full bg-black py-4 md:px-10 lg:px-12 px-4 overflow-hidden"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -57,8 +57,8 @@ export default function FAQ() {
       />
 
       {/* Heading */}
-      <div className="text-center md:mb-20 mb-14 relative">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-white">
+      <div className="text-center  mb-14 relative">
+        <h2 className="text-center text-4xl md:text-5xl font-extrabold relative text-white mb-4">
           Frequently Asked Questions
         </h2>
 
@@ -134,7 +134,7 @@ export default function FAQ() {
       </motion.div>
       <button
         onClick={() => navigate("/faqs")}
-        className="relative z-10 mt-10 mx-auto block px-6 py-2 rounded-full border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white transition"
+        className="relative z-10 mt-8 mx-auto block px-6 py-2 mb-6 rounded-full border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white transition"
       >
         View All FAQs
       </button>

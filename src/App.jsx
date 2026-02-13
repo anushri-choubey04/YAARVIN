@@ -108,6 +108,11 @@ function App() {
  //  dispatch(loadUser());
     // getStripeApiKey();
  // }, [dispatch]);
+  
+
+ useEffect(() => {
+  window.scrollTo(0, 0); // instant, no animation
+}, []);
 
   
 
@@ -123,7 +128,7 @@ function App() {
       ) : (
         <>
           <ToastContainer position="top-right" autoClose={3000} />
-          <div className="min-h-screen flex flex-col relative  pb-16 md:pb-0">
+          <div className="min-h-screen flex flex-col relative  pb-16 md:pb-0 bg-black">
             {/* Navbar always on top */}
             <Navbar
               onLoginClick={() => setShowAuth(true)}

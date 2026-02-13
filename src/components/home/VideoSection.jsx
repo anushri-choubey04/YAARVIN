@@ -60,8 +60,8 @@ export default function VideoSection() {
   ].map((v) => BASE + v);
 
   return (
-    <section className="w-full py-4 bg-black">
-      <header className="flex justify-center items-center mb-4 px-4">
+    <section className="w-full bg-black py-2 md:px-10 lg:px-12 px-2 overflow-hidden">
+      <header className="flex justify-center items-center mb-4 py-2">
         <h2 className="text-4xl md:text-5xl font-extrabold text-white text-center mb-6">
           Rent • Wear • Shine
           <motion.div
@@ -79,8 +79,8 @@ export default function VideoSection() {
         ref={containerRef}
         className="
     grid grid-cols-2 gap-4 
-    overflow-x-auto px-4 py-4
-    md:px-16
+    overflow-x-auto  px-2
+    md:py-4
     md:flex
     md:justify-center
     md:gap-6

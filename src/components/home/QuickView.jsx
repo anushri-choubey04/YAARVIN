@@ -52,10 +52,10 @@ const products = [
 
 export default function QuickView() {
   return (
-    <section className=" mx-auto px-4 py-4 md:px-16  bg-black overflow-hidden">
+    <section className="w-full bg-black py-2 md:px-10 lg:px-12 px-4 overflow-hidden">
       {/* Header */}
-      <div className="text-center mb-10 ">
-        <h2 className="text-center text-4xl md:text-5xl font-extrabold text-white mb-2 md:mb-4">
+      <div className="text-center mb-6 md:mb-12 relative">
+        <h2 className="text-center text-4xl md:text-5xl font-extrabold relative text-white mb-4">
           Quick View
           <motion.div
           className="h-1 w-28 mb-4 bg-blue-600 rounded mx-auto mt-3 shadow-[0_0_18px_#2563eb]"
@@ -67,13 +67,13 @@ export default function QuickView() {
       </div>
 
       {/* Carousel */}
-      <div className="flex gap-4 md:gap-6  md:py-10 py-4 overflow-x-auto scrollbar-hide scroll-smooth">
+      <div className="flex gap-4 md:gap-6  py-4 overflow-x-auto scrollbar-hide scroll-smooth">
         {products.map((item, index) => (
           <Link to={`/quick-view/${item.Id}`} key={item.Id}>
 
           <div
             key={index}
-            className="group relative  min-w-[240px] border border-blue-800 border-r-4 rounded-2xl shadow-md hover:-translate-y-2 hover:scale-105 transition-all duration-500 overflow-hidden"
+            className="group relative  min-w-[240px] border border-blue-800 border-r-8 rounded-2xl shadow-md hover:-translate-y-2 hover:scale-105 transition-all duration-500 overflow-hidden"
           >
             {/* Image */}
             <div className="relative aspect-square overflow-hidden rounded-t-2xl">

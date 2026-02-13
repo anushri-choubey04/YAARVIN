@@ -7,6 +7,8 @@ import SizeGuideModal from "./SizeGuideModal";
 import DeliveryTimeline from "./DeliveryTimeline";
 import StickyRentBar from "./StickyRentBar";
 import images from "../../utils/images";
+import { Search, ShoppingBag, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ALL_PRODUCTS = [
   {
@@ -190,24 +192,31 @@ export default function SingleProductPage({ addToCart }) {
     setZoomStyle({ transform: "scale(1)", transformOrigin: "center" });
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-black text-white min-h-screen">
       {/* HEADER */}
-      <header className="sticky top-0 z-40 bg-black text-white px-2 md:px-8 py-3 flex items-center justify-between">
-        <button onClick={() => navigate(-1)} className="text-sm opacity-80 hover:opacity-100  md:text-xl">
-          <i className="fas fa-arrow-left" /> Back
+      <header className="sticky h-[46px] top-0 z-50 bg-black/90 backdrop-blur-md px-2 py-4 md:px-8 flex items-center justify-between border-b border-t">
+        <button onClick={() => navigate(-1)} className="text-xl">
+          <i className="fas fa-arrow-left" />
         </button>
+        <h2 className="absolute left-1/2 -translate-x-1/2 font-semibold text-lg md:text-2xl text-center">
+          Rent Now
+        </h2>
 
-        <h1 className="absolute left-1/2 -translate-x-1/2 font-semibold text-lg md:text-2xl text-center">Rent Now</h1>
-
-        <div className="md:hidden flex gap-2 text-lg opacity-80">
-          <i className="fas fa-search" />
-          <i className="fas fa-heart" />
-          <i className="fas fa-shopping-bag" />
+        <div className="md:hidden flex items-center gap-4">
+          <Link to="/search">
+            <Search size={20} strokeWidth={1.5} />
+          </Link>
+          <Link to="/cart">
+            <ShoppingBag size={20} strokeWidth={1.5} />
+          </Link>
+          <Link to="/wishlist">
+            <Heart size={20} strokeWidth={1.5} />
+          </Link>
         </div>
       </header>
 
       {/* MAIN */}
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 p-2 md:p-8">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 px-4 pt-2 md:p-8">
         {/* IMAGE SECTION */}
         <div>
           {/* MOBILE */}
@@ -224,7 +233,7 @@ export default function SingleProductPage({ addToCart }) {
                   src={img}
                   onClick={() => setActiveImage(img)}
                   className={`cursor-pointer rounded-xl ${
-                    activeImage === img ? "border-black" : "border-gray-300"
+                    activeImage === img ? "border-blue-800" : "border-gray-300"
                   }`}
                 />
               ))}
@@ -257,28 +266,15 @@ export default function SingleProductPage({ addToCart }) {
         </div>
 
         {/* DETAILS */}
-        <div className="space-y-4">
-          <h1 className="text-2xl font-bold">{product.title}</h1>
+        <div className="space-y-2">
+          <h1 className="text-2xl font-bold text-white">{product.title}</h1>
           <p className="text-xl font-semibold">₹{product.price} / 3 Days</p>
-          <p className="text-gray-600">{product.desc}</p>
-
-          {/* TRUST */}
-          <div className="flex gap-3 text-sm">
-            <span className="bg-green-100 px-3 py-1 rounded-full">
-              ✔ {product.condition}
-            </span>
-            <span className="bg-blue-100 px-3 py-1 rounded-full">
-              🧼 Sanitized
-            </span>
-            <span className="bg-purple-100 px-3 py-1 rounded-full">
-              👤 {product.owner}
-            </span>
-          </div>
+          <p className="text-gray-200">{product.desc}</p>
 
           {/* DAMAGE PROTECTION */}
-          <div className="bg-yellow-50 border border-yellow-400 p-4 rounded-xl">
-            <p className="font-semibold">🛡️ Damage Protection</p>
-            <p className="text-sm text-gray-700">
+          <div className="bg-black border border-white p-4 rounded-xl">
+            <p className="font-semibold">🛡️Damage Protection</p>
+            <p className="text-sm text-gray-400">
               Minor wear & tear covered. Major damage deducted from security.
             </p>
           </div>
@@ -291,10 +287,10 @@ export default function SingleProductPage({ addToCart }) {
                 <button
                   key={s}
                   onClick={() => setSelectedSize(s)}
-                  className={`px-5 py-2 rounded-full border border-gray-500 ${
+                  className={`px-5 py-2 rounded-full border border-white ${
                     selectedSize === s
-                      ? "bg-black text-white"
-                      : "hover:bg-black hover:text-white"
+                      ? "bg-blue-700 text-white"
+                      : "hover:bg-blue-700 hover:text-white"
                   }`}
                 >
                   {s}
@@ -302,7 +298,7 @@ export default function SingleProductPage({ addToCart }) {
               ))}
               <button
                 onClick={() => setSizeGuideOpen(true)}
-                className="text-sm underline text-gray-800 mt-2"
+                className="text-sm underline text-gray-400 mt-2"
               >
                 View Size Guide
               </button>
@@ -330,10 +326,10 @@ export default function SingleProductPage({ addToCart }) {
                 <button
                   key={p.label}
                   onClick={() => setRentPlan(p)}
-                  className={`p-4 rounded-xl border border-gray-500 ${
+                  className={`p-4 rounded-xl border border-white ${
                     rentPlan?.label === p.label
                       ? "bg-black text-white"
-                      : "hover:bg-black hover:text-white"
+                      : "hover:bg-blue-700 hover:text-white"
                   }`}
                 >
                   {p.label}
@@ -350,11 +346,11 @@ export default function SingleProductPage({ addToCart }) {
             min={new Date().toISOString().split("T")[0]}
             value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
-            className="border px-4 py-2 border-gray-500 rounded-lg w-full"
+            className="border px-4 py-2 bg-black text-white rounded-lg w-full"
           />
 
           {/* SUMMARY */}
-          <div className="bg-white p-5 rounded-xl border border-gray-500 shadow space-y-2">
+          <div className="bg-black p-5 rounded-xl border border-gray-500 shadow space-y-2">
             <div className="flex justify-between">
               <span>Rental</span>
               <span>₹{rentPlan?.price || 0}</span>
@@ -371,16 +367,23 @@ export default function SingleProductPage({ addToCart }) {
           </div>
 
           {/* ACTIONS */}
-          <div className="flex gap-4">
+          <div className="flex gap-3 pt-2">
             <button
               onClick={() => addToCart(product)}
-              className="w-1/2 border border-gray-500 py-3 rounded-xl"
+              className="w-1/2 border border-white/30 py-3 rounded-full
+               bg-transparent text-white
+               hover:bg-white hover:text-black
+               transition-all duration-300"
             >
               Add to Cart
             </button>
+
             <button
               onClick={() => setCheckoutOpen(true)}
-              className="w-1/2 bg-black text-white py-3 rounded-xl"
+              className="w-1/2 bg-white text-black py-3 rounded-full
+               font-semibold
+               hover:scale-[1.03] active:scale-[0.98]
+               transition-all duration-300 shadow-md"
             >
               Rent Now
             </button>
@@ -391,7 +394,7 @@ export default function SingleProductPage({ addToCart }) {
       {/* CHECKOUT MODAL */}
       {checkoutOpen && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-2xl w-[90%] max-w-md space-y-4">
+          <div className="bg-white text-black p-6 rounded-2xl w-[90%] max-w-md space-y-4">
             <h2 className="text-xl font-semibold">Checkout</h2>
 
             <div className="flex justify-between">
@@ -418,9 +421,9 @@ export default function SingleProductPage({ addToCart }) {
 
       {/* SIMILAR + REVIEWS */}
       <SimilarProducts products={similarProducts} />
-      <div className="max-w-6xl mx-auto px-4 my-16">
+      {/* <div className="max-w-6xl mx-auto px-4">
         <ReviewCard product={product} />
-      </div>
+      </div> */}
     </div>
   );
 }

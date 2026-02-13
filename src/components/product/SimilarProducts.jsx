@@ -26,7 +26,7 @@ const SimilarProducts = memo(({ products = [] }) => {
   };
 
   return (
-    <section className="mt-24 bg-black px-4 md:px-10 py-10">
+    <section className=" bg-black px-4 md:px-10 py-10">
       {/* HEADER */}
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-xl md:text-2xl font-semibold text-white">
@@ -76,7 +76,7 @@ const SimilarProducts = memo(({ products = [] }) => {
                 {/* Wishlist */}
                 <button
                   onClick={(e) => toggleWishlist(item.id, e)}
-                  className="absolute top-3 right-3 bg-white p-2 rounded-full"
+                  className="absolute top-3 right-3 bg-white  p-2 rounded-full"
                 >
                   {wishlist[item.id] ? (
                     <FavoriteIcon fontSize="small" className="text-red-500" />

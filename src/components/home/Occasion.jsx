@@ -45,7 +45,7 @@ export default function Category() {
   };
 
   return (
-    <section className="w-full bg-black py-4 md:px-10 lg:px-12 px-2 ">
+    <section className="w-full bg-black md:pt-6 py-2 md:px-10 lg:px-12 px-4 overflow-hidden">
 
       {/* HEADING */}
       <motion.h2
@@ -53,13 +53,13 @@ export default function Category() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-center text-4xl md:text-5xl font-extrabold text-white m-4"
+        className="text-center text-4xl md:text-5xl font-extrabold relative text-white mb-4"
       >
         Rent by Occasion
       </motion.h2>
 
     <motion.div
-          className="h-1 w-28 md:mb-4 bg-blue-800 rounded mx-auto mt-3 shadow-[0_0_18px_#2563eb]"
+          className="h-1 w-28 mb-6 bg-blue-600 rounded mx-auto mt-3 shadow-[0_0_18px_#2563eb] "
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.6 }}
@@ -71,7 +71,7 @@ export default function Category() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.2 }}
-        className="flex gap-2 md:gap-5 overflow-x-auto m-2 py-6  scroll-smooth snap-x snap-mandatory scrollbar-hide "
+        className="flex gap-2 md:gap-5 overflow-x-auto  scroll-smooth snap-x snap-mandatory scrollbar-hide md:py-10 py-4"
       >
         {categories.map((cat, i) => (
           <Link key={i} to={`/occasion/${cat.slug}`}>

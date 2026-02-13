@@ -9,6 +9,14 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 @keyframes slideUp {
   from {
     transform: translateY(100%);
@@ -23,4 +31,9 @@
 .animate-slideUp {
   animation: slideUp 0.25s ease-out;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 

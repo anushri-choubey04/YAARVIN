@@ -85,12 +85,12 @@ export default function Earn() {
       </section>
 
       {/* Upload form */}
-      <section className="p-6 max-w-6xl mx-auto">
+      <section className="px-6 py-6 max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-6">
           List Your <span className="text-blue-400">Outfit</span>
         </h2>
 
-        <form className="bg-[#020617]/60 backdrop-blur-xl border border-blue-500 rounded-2xl p-8 space-y-5">
+        <form className="bg-[#020617]/60 backdrop-blur-xl border border-blue-500 rounded-2xl p-2 space-y-5">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {["Front View", "Back View", "Close-up"].map((t, i) => (
               <label

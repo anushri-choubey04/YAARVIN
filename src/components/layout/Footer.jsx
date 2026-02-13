@@ -174,7 +174,7 @@ export default function Footer() {
 
         {/* bottom line */}
         <div className=" relative z-10 mb-20 md:m-5  text-center text-gray-300 text-sm">
-          © 2025 Saarvin — All Rights Reserved
+          © 2026 Yaarvin — All Rights Reserved
         </div>
       </div>
     </footer>

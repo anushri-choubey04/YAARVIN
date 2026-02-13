@@ -1,43 +1,49 @@
 import images from "../../utils/images";
 
-
 export default function StoreLocation() {
   return (
     <div className="container-location">
-      {/* Mobile-only section */}
+      {/* ===== MOBILE LUXURY STORE SECTION ===== */}
       <section
         id="store-location"
-        className="block md:hidden bg-black/95   mx-auto  text-center px-4 py-4"
+        className="block md:hidden bg-black  px-4 py-6"
       >
-        {/* Store Icon */}
-        <div className="flex justify-center mb-4">
-          <img
-            src={images["StoreLocation/store.png"]}
-            alt="Store Icon"
-            className="w-16 h-16"
-          />
-        </div>
+        {/* MAIN STORE CARD */}
+        <div className="bg-[#111] rounded-3xl border border-white/10 shadow-xl px-6 py-2 text-center relative overflow-hidden bg-gradient-to-r from-blue-900  to-stone-800">
+          {/* Soft Top Accent Line */}
 
-        {/* Heading */}
-        <h2 className="text-4xl font-extrabold text-white hover:text-blue-600 transition">
-          Visit our store
-        </h2>
+          <div className="absolute top-0 left-0 w-full h-[3px]" />
 
-        {/* Description */}
-        <p className="text-gray-400 mt-2 mb-6 text-sm leading-relaxed">
-          Walk-in to our store for the services <br />
-          Laundry, Give and borrow clothes in rent.
-        </p>
+          {/* Store Icon */}
+          <div className="flex justify-center mb-4">
+            <div className="w-24 h-24 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10">
+              <img
+                src={images["storeLocation.jpg"]}
+                alt="Store Icon"
+                className="w-20 h-20 rounded-xl object-contain"
+              />
+            </div>
+          </div>
 
-        {/* Video */}
-        <div className="rounded-lg overflow-hidden shadow-md">
-          <video
-            controls
-            className="w-full h-60 object-cover"
-          >
-            <source src="#" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          {/* Heading */}
+          <h2 className="text-xl font-semibold text-white tracking-wide">
+            Walk-in to our store
+          </h2>
+
+          {/* Description */}
+          <p className="text-zinc-400 mt-3 text-sm leading-relaxed max-w-[260px] mx-auto">
+            Check for your closest store and drop your clothes at our premium
+            rental & laundry facility.
+          </p>
+
+          {/* VIDEO AREA */}
+          <div className="my-4 rounded-xl overflow-hidden border border-white/10">
+            <video controls className="w-full h-52 object-cover">
+              <source src="#" type="video/mp4" />
+            </video>
+          </div>
+
+          
         </div>
       </section>
     </div>

@@ -14,14 +14,14 @@ export default function PriceSection() {
   ];
 
   return (
-    <section className="text-center py-4 px-4 bg-black mx-auto">
+    <section className="w-full bg-black py-2 md:py-6 md:px-10 lg:px-12 px-4 overflow-hidden">
 
-      <h2 className="text-4xl md:text-5xl font-extrabold text-white">
+      <h2 className="text-center text-4xl md:text-5xl font-extrabold relative text-white mb-4">
         RENT BY PRICE
       </h2>
 
       <motion.div
-        className="h-1 w-28 mb-10 bg-blue-600 rounded mx-auto mt-3 shadow-[0_0_18px_#2563eb]"
+        className="h-1 w-28 mb-6 bg-blue-600 rounded mx-auto mt-3 shadow-[0_0_18px_#2563eb]"
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         transition={{ duration: 0.6 }}
@@ -42,7 +42,7 @@ export default function PriceSection() {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
 
-              <div className="absolute bottom-0 w-full h-10 md:h-16 md:text-4xl bg-blue-900 text-white px-6 py-2 text-xl">
+              <div className="absolute bottom-0 w-full h-10 md:h-16 md:text-4xl bg-blue-900 text-white px-6 py-2 text-xl items-center flex justify-center font-bold tracking-wide">
                 {p.label}
               </div>
             </div>
